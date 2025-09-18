@@ -97,6 +97,25 @@ namespace Calculadora
             Console.WriteLine($"Resultado: {num1} × {num2} = {resultado}");
         }
         
+                static void RealizarDivisao()
+        {
+            Console.WriteLine("\n=== DIVISÃO ===");
+            Console.Write("Digite o primeiro número: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            
+            Console.Write("Digite o segundo número: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            
+            if (num2 == 0)
+            {
+                Console.WriteLine("ERRO: Não é possível dividir por zero!");
+            }
+            else
+            {
+                double resultado = num1 / num2;
+                Console.WriteLine($"Resultado: {num1} ÷ {num2} = {resultado}");
+            }
+        }
         
     }
 }
