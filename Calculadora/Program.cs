@@ -29,7 +29,7 @@ namespace Calculadora
                         RealizarMultiplicacao;
                         break;
                     case "4":
-                        Console.WriteLine("Divisão selecionada");
+                        RealizarDivisao;
                         break;
                     case "5":
                         continuar = false;
