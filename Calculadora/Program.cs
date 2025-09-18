@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CalculadoraBasica
+namespace Calculadora
 {
     class Program
     {
@@ -20,7 +20,7 @@ namespace CalculadoraBasica
                 switch (opcao)
                 {
                     case "1":
-                        Console.WriteLine("Soma selecionada");
+                        RealizarSoma();
                         break;
                     case "2":
                         Console.WriteLine("Subtração selecionada");
@@ -57,6 +57,19 @@ namespace CalculadoraBasica
             Console.WriteLine("3 - Multiplicação");
             Console.WriteLine("4 - Divisão");
             Console.WriteLine("5 - Sair");
+        }
+        
+        static void RealizarSoma()
+        {
+            Console.WriteLine("\n=== SOMA ===");
+            Console.Write("Digite o primeiro número: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            
+            Console.Write("Digite o segundo número: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+            
+            double resultado = num1 + num2;
+            Console.WriteLine($"Resultado: {num1} + {num2} = {resultado}");
         }
     }
 }
