@@ -7,16 +7,16 @@ namespace Calculadora
         static void Main(string[] args)
         {
             Console.WriteLine("CALCULADORA");
-            
+
             bool continuar = true;
-            
+
             while (continuar)
             {
                 ExibirMenu();
-                
+
                 Console.Write("Escolha uma opção: ");
                 string opcao = Console.ReadLine();
-                
+
                 switch (opcao)
                 {
                     case "1":
@@ -39,7 +39,7 @@ namespace Calculadora
                         Console.WriteLine("Opção inválida!");
                         break;
                 }
-                
+
                 if (continuar)
                 {
                     Console.WriteLine("\nPressione qualquer tecla para continuar...");
@@ -48,7 +48,7 @@ namespace Calculadora
                 }
             }
         }
-        
+
         static void ExibirMenu()
         {
             Console.WriteLine("\n=== MENU ===");
@@ -58,31 +58,43 @@ namespace Calculadora
             Console.WriteLine("4 - Divisão");
             Console.WriteLine("5 - Sair");
         }
-        
+
         static void RealizarSoma()
         {
             Console.WriteLine("\n=== SOMA ===");
             Console.Write("Digite o primeiro número: ");
             double num1 = Convert.ToDouble(Console.ReadLine());
-            
+
             Console.Write("Digite o segundo número: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
-            
+
             double resultado = num1 + num2;
             Console.WriteLine($"Resultado: {num1} + {num2} = {resultado}");
         }
-        
+
         static void RealizarSubtracao()
         {
             Console.WriteLine("\n=== SUBTRAÇÃO ===");
+            Console.Write("Digite o primeiro número: ");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Digite o segundo número: ");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            double resultado = num1 - num2;
+            Console.WriteLine($"Resultado: {num1} - {num2} = {resultado}");
+        }
+        static void RealizarMultiplicacao()
+        {
+            Console.WriteLine("\n=== MULTIPLICAÇÃO ===");
             Console.Write("Digite o primeiro número: ");
             double num1 = Convert.ToDouble(Console.ReadLine());
             
             Console.Write("Digite o segundo número: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
             
-            double resultado = num1 - num2;
-            Console.WriteLine($"Resultado: {num1} - {num2} = {resultado}");
+            double resultado = num1 * num2;
+            Console.WriteLine($"Resultado: {num1} × {num2} = {resultado}");
         }
     }
 }
