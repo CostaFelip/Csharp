@@ -26,10 +26,10 @@ namespace Calculadora
                         RealizarSubtracao();
                         break;
                     case "3":
-                        RealizarMultiplicacao;
+                        RealizarMultiplicacao();
                         break;
                     case "4":
-                        RealizarDivisao;
+                        RealizarDivisao();
                         break;
                     case "5":
                         continuar = false;
